@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Unsplash</PackageId>
+    <PackageId>UnsplashClient</PackageId>
     <Version>1.0.0-alpha</Version>
     <Authors>Iliyan Videv</Authors>
     <Product>Unsplash</Product>

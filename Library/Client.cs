@@ -29,7 +29,7 @@ namespace Unsplash
 
         internal static Uri BaseAddress { get; } = new Uri("https://api.unsplash.com/");
 
-        internal static string AccessKey { get; private set; }
+        internal static string AccessKey { get; private set; } = string.Empty;
 
         public void Dispose()
         {

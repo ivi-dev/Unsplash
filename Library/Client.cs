@@ -21,14 +21,15 @@ namespace Unsplash
         private const string VERSION = "1";
         private readonly HttpClient netClient = new HttpClient();
 
-        public Client()
+        public Client(string accessKey)
         {
+            AccessKey = accessKey;
             netClient.DefaultRequestHeaders.Add("Accept-Version", $"v{VERSION}");
         }
 
         internal static Uri BaseAddress { get; } = new Uri("https://api.unsplash.com/");
 
-        internal static string AccessKey { get; } = "4HhWATabaMm9srNdwuwgcNogM6gnB7obvBcMsJltKFw";
+        internal static string AccessKey { get; private set; }
 
         public void Dispose()
         {

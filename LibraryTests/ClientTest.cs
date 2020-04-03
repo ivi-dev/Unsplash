@@ -19,7 +19,7 @@ namespace UnsplashTests.Unsplash
 
     public sealed class ClientTest : IDisposable
     {
-        private readonly Client client = new Client();
+        private readonly Client client = new Client(string.Empty);
 
         [Fact]
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously

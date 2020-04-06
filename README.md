@@ -127,7 +127,7 @@ Here's a list of the client's public API:
   - **Returns:** A `List<Collection>` object.
   
   
-<span id="Photos-SearchResults"></span>
+<span id="Photo"></span>
 ## Unspslash.Photos.Photo
 A class that describes a photo. It has these public properties:
 - string **id** - the photo's id

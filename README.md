@@ -207,10 +207,48 @@ The class accepts these arguments in its constructor:
 - [Orientation[(#Orientation)? **orientation** - search only for photos with this orientation.
 
 
+<span id="DownloadPhotoRequest"></span>
+### Unsplash.Requests.DownloadPhotoRequest
+Construct it to set parameters for a photo download request.
+The class accepts these arguments in its constructor:
+- Uri? **baseUrl** - a photo's ownload location.
+- uint? **width** - the photos desired width in pixels.
+- uint? **height** - the photos desired height in pixels.
+- [Crop](#Crop)? **crop** - a cropping mode.
+- [Format](#Format)? **format** - a photo format.
+- uint? **quality** - sets the quality of the photo to be downloaded, us a number from 0 to 100.
+- [Fit](#Fit)? **fit** - a fit mode.
+- uint? **dpi** - sets the dpi of the photo to be downloaded.
+
+
 <span id="Sort"></span>
 ### Unsplash.Photos.Sort
 An enumeration of photo sorting options. Aailable options:
 `RELEVANAT`, `LATEST`.
+
+<span id="Crop"></span>
+### Unsplash.Photos.Crop
+An enumeration of photo cropping options. Aailable options:
+`TOP`, `BOTTOM`, `LEFT`, `RIGHT`, `FACES`, `FOCAL_POINT`, `EDGES`, `ENTROPY`.
+
+<span id="Format"></span>
+### Unsplash.Photos.Format
+An enumeration of photo formatting options. Aailable options:
+`GIF`, `JP2`, `JPG`, `JSON`, `JXR`, `PJPG`, `MP4`, `PNG`, `PNG8`, `PNG32`, 
+`WEBM`, `WEBP`.
+
+<span id="Fit"></span>
+### Unsplash.Photos.Fit
+An enumeration of photo fitting options. Aailable options:
+`CLAMP`,
+`CLIP`,
+`CROP`,
+`FACEAREA`,
+`FILL`,
+`FILLMAX`,
+`MAX`,
+`MIN`,
+`SCALE`.
 
 
 <span id="ColorFilter"></span>

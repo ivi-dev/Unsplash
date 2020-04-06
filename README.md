@@ -129,7 +129,7 @@ Here's a list of [Unsplash.Client](#Client)'s public API:
   
 
 <span id="Photos-SearchResults"></span>
-### Unspslash.Photos.SearchResults
+## Unspslash.Photos.SearchResults
 A class that contains the results of a photo search. It has three public properties:
 
 - List<Photo> **results** - a list of search matches
@@ -137,7 +137,7 @@ A class that contains the results of a photo search. It has three public propert
 - uint **total_pages** - a number of results pages
 
 <span id="Collections-SearchResults"></span>
-### Unspslash.Collections.SearchResults
+## Unspslash.Collections.SearchResults
 A class that contains the results of a collection search. It has three public properties:
 
 - **results** - a `List<Collection>` with search matches
@@ -176,13 +176,13 @@ The class accepts these arguments in its constructor:
 - uint? **quantity** - the number of resolution units to get. For example a value of '1' here and 
 `StatsResolution.DAYS` for the 'resolution' will get photo stats for one day.
 
-### The Unsplash.Client class
+## The Unsplash.Client class
 <span id="Client"></span>
 The **Unsplash.Client** class is the main gateway into the system. In order to use its [APIs](#public-api) 
 you instantiate it with an Unsplash API access key which you can obtain from 
 [Unsplash Developer](https://unsplash.com/oauth/applications).
 
-### Default parameters
+## Default parameters
 <span id="default-parameters"></span>
 The Unsplash web service has some default parameter values it uses when processing requests to it, in case those parameters had not been specified explicitly. Remember, you can set request parameters through an instance of a class from the [Unsplash.Requests](#request-types) namespace, whenever it is required as an argument in any of the [public APIs](#public-api).
 

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -10,7 +10,6 @@
     <Authors>Iliyan Videv</Authors>
     <Product>Unsplash</Product>
     <Description>A library for getting freely usable photos from Unsplash web service.</Description>
-    <PackageProjectUrl></PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/ivi-dev/Unsplash</RepositoryUrl>
     <RepositoryType>public</RepositoryType>

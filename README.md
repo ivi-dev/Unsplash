@@ -173,15 +173,22 @@ If any of them is not provided an Unsplash web service [default value](#default-
 
 
 <span id="GetRandomPhotoRequest"></span>
-### Unsplash.Requests.GetRandomPhotosRequest
+### Unsplash.Requests.GetRandomPhotoRequest
 Construct it to set parameters for a request for a random photo.
 The class accepts these arguments in its constructor:
-- uint **count** - the number of photos to get.
 - [Orientation](#Orientation)? **orientation** - the orientation of the photo.
 - string[]? **collections** - tells the service to get random photos from these collections only.
 - bool? **featured** - weather to get only featured photos or not.
 - string? **username** - get photos only by that user.
 - string? **query** - get photos that match that query only.
+
+
+<span id="GetRandomPhotoRequest"></span>
+### Unsplash.Requests.GetRandomPhotosRequest
+Construct it to set parameters for a request for a random photo.
+The class accepts the same arguments in its constructor as 
+[Unsplash.Requests.GetRandomPhotoRequest](#GetRandomPhotoRequest) plus this one:
+- uint **count** - the number of photos to get.
 
 
 <span id="GetPhotoStatsRequest"></span>

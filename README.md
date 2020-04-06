@@ -143,6 +143,17 @@ A class that describes a photo. It has these public properties:
 - string **alt_description** - the photo's alternate description
 
 
+<span id="DownloadURLs"></span>
+## Unspslash.Photos.DownloadURLs
+A class that contains URLs to an image. The URLs can be used for photo download.
+The class has these public properties:
+- Uri **raw** - a path to the raw photo.
+- Uri **full** - a path to the photo in full resolution.
+- Uri **regular** - a path to the photo in regular resolution.
+- Uri **small** - a path to the photo in small resolution.
+- Uri **thumb** - a path to the photo in thumbnail resolution.
+
+
 <span id="Collection"></span>
 ## Unspslash.Photos.Collection
 A class that describes a Collection. It has these public properties:

@@ -16,7 +16,7 @@ First you have to install it into your project by one of the following ways (mak
 Then, make a new instance of the [Unsplash.Client](#Client) class and call any of its public methods 
 to get data.
 
-Here's a list of [Unsplash.Client](#Client)'s public API:
+Here's a list of the client's public API:
 
 <span id="public-api"></span>
 ## Working with photos:

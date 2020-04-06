@@ -201,10 +201,21 @@ Construct it to set parameters for a photo search request.
 The class accepts these arguments in its constructor:
 - string? **query** - a search term.
 - uint? **page** - the result page to show.
+- uint? **perPage** - number of matches to show per page.
 - [Sort](#Sort)? **sort** - the sorting to apply to the result.
-- string[]? **perPage** - search only collections with these ids for photos
+- string[]? **collections** - search only these collections.
 - [ColorFilter](#ColorFilter)? **color** - search only for photos with this color filter. 
 - [Orientation[(#Orientation)? **orientation** - search only for photos with this orientation.
+
+
+
+<span id="SearchCollectionsRequest"></span>
+### Unsplash.Requests.SearchCollectionsRequest
+Construct it to set parameters for a photo search request.
+The class accepts these arguments in its constructor:
+- string? **query** - a search term.
+- uint? **page** - the result page to show.
+- uint? **perPage** - number of matches to show per page.
 
 
 <span id="DownloadPhotoRequest"></span>

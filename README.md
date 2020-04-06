@@ -7,11 +7,11 @@ It lets you list, seearch through and download via an easy to use, clean [API](#
 The UnsplashLibrary is distributed as a NuGet package for easy integration into .NET projects of various kinds.
 
 # How do I use it?
-First you have to install it into your project by one of the following ways:
+First you have to install it into your project by one of the following ways (make sure to substitude `<desired-version-here>` with the version number you want):
 
-- **Package Manager Console**: `Install-Package UnsplashClient -Version 2.0.1`
-- **.NET CLI**: `dotnet add package UnsplashClient --version 2.0.1`
-- **PackageReference** in your project config: `<PackageReference Include="UnsplashClient" Version="2.0.1" />`.
+- **Package Manager Console**: `Install-Package UnsplashClient -Version <desired-version-here>`
+- **.NET CLI**: `dotnet add package UnsplashClient --version <desired-version-here>`
+- **PackageReference** in your project config: `<PackageReference Include="UnsplashClient" Version="<desired-version-here>" />`.
 
 Then, make a new instance of the [Unsplash.Client](#Client) class and call any of its public methods methods 
 to get data.

@@ -14,3 +14,6 @@ dotnet_diagnostic.SA1116.severity = none
 
 # SA1503: Braces should not be omitted
 dotnet_diagnostic.SA1503.severity = none
+
+# SA1602: Enumeration items should be documented
+dotnet_diagnostic.SA1602.severity = none

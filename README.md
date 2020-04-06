@@ -13,7 +13,7 @@ First you have to install it into your project by one of the following ways (mak
 - **.NET CLI**: `dotnet add package UnsplashClient --version <desired-version-here>`
 - **PackageReference** in your project config: `<PackageReference Include="UnsplashClient" Version="<desired-version-here>" />`.
 
-Then, make a new instance of the [Unsplash.Client](#Client) class and call any of its public methods methods 
+Then, make a new instance of the [Unsplash.Client](#Client) class and call any of its public methods 
 to get data.
 
 Here's a list of [Unsplash.Client](#Client)'s public API:

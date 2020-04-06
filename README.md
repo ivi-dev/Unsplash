@@ -195,6 +195,38 @@ The class accepts these arguments in its constructor:
 - string? **query** - get photos that match that query only.
 
 
+<span id="SearchPhotosRequest"></span>
+### Unsplash.Requests.SearchPhotosRequest
+Construct it to set parameters for a photo search request.
+The class accepts these arguments in its constructor:
+- string? **query** - a search term.
+- uint? **page** - the result page to show.
+- [Sort](#Sort)? **sort** - the sorting to apply to the result.
+- string[]? **perPage** - search only collections with these ids for photos
+- [ColorFilter](#ColorFilter)? **color** - search only for photos with this color filter. 
+- [Orientation[(#Orientation)? **orientation** - search only for photos with this orientation.
+
+
+<span id="Sort"></span>
+### Unsplash.Photos.Sort
+An enumeration of photo sorting options. Aailable options:
+`RELEVANAT`, `LATEST`.
+
+
+<span id="ColorFilter"></span>
+### Unsplash.Photos.ColorFilter
+An enumeration of photo color filters. Aailable options:
+`BLACK_AND_WHITE`, `BLACK`, `WHITE`, `YELLOW`, `ORANGE`, `RED`, `PURPLE`, 
+`MAGENTA`, `GREEN`, `TEAL`, `BLUE`.
+
+
+<span id="Orientation"></span>
+### Unsplash.Photos.Orientation
+An enumeration of photo orientations. Aailable options:
+`LANDSCAPE`, `PORTRAIT`, `SQUARISH`.
+
+
+
 <span id="GetRandomPhotosRequest"></span>
 ### Unsplash.Requests.GetRandomPhotosRequest
 Construct it to set parameters for a request for a random photo.

@@ -91,6 +91,37 @@ Here's a list of the client's public API:
   - **Returns:** The length in bytes of the downloaded file.
   - **Throws:** An `ArgumentNullException` if `request` is null.
   
+ 
+  <span id="Photo"></span>
+### Unspslash.Photos.Photo
+A class that describes a photo. It has these public properties:
+- string **id** - the photo's id
+- DateTime **created_at** - creation date
+- [User[(#User) **user** - the author of the photo
+- uint **width** - photo's width in pixels
+- uint **height** - photo's height in pixels
+- [DownloadURLs](#DownloadURLs) **urls** - a set of URLs that you can use to download 
+  the photo from
+- uint **likes** - number of likes the photo has
+- string **color** - the average color of the photo
+- string **description** - the photo's description
+- string **alt_description** - the photo's alternate description
+
+
+<span id="DownloadURLs"></span>
+### Unspslash.Photos.DownloadURLs
+A class that contains URLs to an image. The URLs can be used for photo download.
+The class has these public properties:
+- Uri **raw** - a path to the raw photo.
+- Uri **full** - a path to the photo in full resolution.
+- Uri **regular** - a path to the photo in regular resolution.
+- Uri **small** - a path to the photo in small resolution.
+- Uri **thumb** - a path to the photo in thumbnail resolution.
+  
+  
+  
+  
+  
   
 ## Working with photo collections
 - SearchCollectionsAsync(string query)
@@ -125,33 +156,6 @@ Here's a list of the client's public API:
   - Get a list of collections related to a [Collection](#Collection), asynchronously.
   - **Arguments:** The `id` of the collection to get related collections of.
   - **Returns:** A `List<Collection>` object.
-  
-  
-<span id="Photo"></span>
-## Unspslash.Photos.Photo
-A class that describes a photo. It has these public properties:
-- string **id** - the photo's id
-- DateTime **created_at** - creation date
-- [User[(#User) **user** - the author of the photo
-- uint **width** - photo's width in pixels
-- uint **height** - photo's height in pixels
-- [DownloadURLs](#DownloadURLs) **urls** - a set of URLs that you can use to download 
-  the photo from
-- uint **likes** - number of likes the photo has
-- string **color** - the average color of the photo
-- string **description** - the photo's description
-- string **alt_description** - the photo's alternate description
-
-
-<span id="DownloadURLs"></span>
-## Unspslash.Photos.DownloadURLs
-A class that contains URLs to an image. The URLs can be used for photo download.
-The class has these public properties:
-- Uri **raw** - a path to the raw photo.
-- Uri **full** - a path to the photo in full resolution.
-- Uri **regular** - a path to the photo in regular resolution.
-- Uri **small** - a path to the photo in small resolution.
-- Uri **thumb** - a path to the photo in thumbnail resolution.
 
 
 <span id="Collection"></span>

@@ -142,7 +142,56 @@ A class that describes a photo. It has these public properties:
 - string **description** - the photo's description
 - string **alt_description** - the photo's alternate description
 
-There's also a `ToString()` method that returns a summary of the photo's attributes.
+
+<span id="Collection"></span>
+## Unspslash.Photos.Collection
+A class that describes a Collection. It has these public properties:
+- string **id** - the collection's id.
+- string **title** - the collection's title.
+- string **description** - the collection's description.
+- DateTime **published_at** - the collection's date of publishing.
+- bool **featured** - weather the collection is featured or not.
+- uint **total_photos** - total number of photos in the collection.
+- [Photo](#Photo) **cover_photo** - the collection's cover photo.
+- [User](#User) **user** - the collection's author.
+- [Links](#Links) **links** - links to the collection on the web.
+
+There's also a `ToString()` method that returns a summary of the collection's attributes.
+
+
+<span id="User"></span>
+## Unspslash.Users.User
+A class that describes a user. It has these public properties:
+- string **id** - the user's id.
+- [Links](#Links) **links** - links to user's resources.
+- uint **total_collections** - total number of collections the user has.
+- uint **total_likes** - total number of likes the user has accumulated.
+- uint **total_photos** - total number of photos the user has.
+- string **first_name** - the user's first name.
+- string **last_name** - the user's last name.
+- Uri **portfolio_url** - a link to the user's portfolio.
+- string **bio** - the user's bio.
+- string **location** - the user's location.
+- [ProfileImage](#ProfileImage) **id** - the user's profile image.
+
+
+<span id="Links"></span>
+## Unspslash.Users.Links
+A class that contains links to a user's web resources. It has these public properties:
+- Uri **self** - a link to the user's profile page.
+- Uri **html** - a link to the user's web page.
+- Uri **photos** - a link to the user's photos.
+- Uri **likes** - a link to the user's likes page.
+- Uri **portfolio** - a link to the user's portfolio.
+- Uri **following** - a link to the user's 'following' page.
+- Uri **followers** - a link to the user's 'followers' page.
+
+<span id="ProfileImage"></span>
+## Unspslash.Users.ProfileImage
+A class that describes a user's profile image. It has these public properties:
+- Uri **small** - a link to the user's small sized profile image.
+- Uri **medium** - a link to the user's medium sized profile page.
+- Uri **large** - a link to the user's large sized profile page.
 
 <span id="Stats"></span>
 ## Unspslash.Photos.Stats
@@ -214,6 +263,14 @@ The class accepts these arguments in its constructor:
 Construct it to set parameters for a photo search request.
 The class accepts these arguments in its constructor:
 - string? **query** - a search term.
+- uint? **page** - the result page to show.
+- uint? **perPage** - number of matches to show per page.
+
+
+<span id="ListFeaturedCollectionsRequest"></span>
+### Unsplash.Requests.ListFeaturedCollectionsRequest
+Construct it to set parameters for a request to list featured collections.
+The class accepts these arguments in its constructor:
 - uint? **page** - the result page to show.
 - uint? **perPage** - number of matches to show per page.
 

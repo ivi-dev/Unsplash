@@ -2,7 +2,7 @@
 Unsplash is a .NET Core 3.1 library for getting freely usable photos from the [Unsplash web service](https://unsplash.com). 
 
 The library gives you free access to a vast array of freely distributable photos and photo collections. 
-It lets you list, seearch through and download via an easy to use, clean API.
+It lets you list, seearch through and download via an easy to use, clean [API](#public-api).
 
 The UnsplashLibrary is distributed as a NuGet package for easy integration into .NET projects of various kinds.
 

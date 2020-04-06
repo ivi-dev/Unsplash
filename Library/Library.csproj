@@ -6,7 +6,7 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>UnsplashClient</PackageId>
-    <Version>1.0.0-alpha</Version>
+    <Version>2.0.1</Version>
     <Authors>Iliyan Videv</Authors>
     <Product>Unsplash</Product>
     <Description>A library for getting freely usable photos from Unsplash web service.</Description>
@@ -15,6 +15,10 @@
     <RepositoryUrl>https://github.com/ivi-dev/Unsplash</RepositoryUrl>
     <RepositoryType>public</RepositoryType>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageReleaseNotes>Added the ability to specify an API key during client initialization</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <FileVersion>2.0.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -144,6 +144,18 @@ A class that describes a photo. It has these public properties:
 
 There's also a `ToString()` method that returns a summary of the photo's attributes.
 
+<span id="PhotoStats"></span>
+## Unspslash.Photos.Stats
+A class that contains stats of a photo. It has these public properties:
+
+- [Downloads](#Downloads) **downloads** - the download stats of a photo
+
+<span id="Downloads"></span>
+## Unspslash.Photos.Downloads
+A class that contains download stats of a photo. It has these public properties:
+
+- uint **total** - the total number of downloads of a photo
+
 <span id="Photos-SearchResults"></span>
 ## Unspslash.Photos.SearchResults
 A class that contains the results of a photo search. It has these public properties:

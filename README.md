@@ -127,10 +127,26 @@ Here's a list of the client's public API:
   - **Returns:** A `List<Collection>` object.
   
   
+<span id="Photos-SearchResults"></span>
+## Unspslash.Photos.Photo
+A class that describes a photo. It has these public properties:
+- string **id** - the photo's id
+- DateTime **created_at** - creation date
+- [User[(#User) **user** - the author of the photo
+- uint **width** - photo's width in pixels
+- uint **height** - photo's height in pixels
+- [DownloadURLs](#DownloadURLs) **urls** - a set of URLs that you can use to download 
+  the photo from
+- uint **likes** - number of likes the photo has
+- string **color** - the average color of the photo
+- string **description** - the photo's description
+- string **alt_description** - the photo's alternate description
+
+There's also a `ToString()` method that returns a summary of the photo's attributes.
 
 <span id="Photos-SearchResults"></span>
 ## Unspslash.Photos.SearchResults
-A class that contains the results of a photo search. It has three public properties:
+A class that contains the results of a photo search. It has these public properties:
 
 - List<Photo> **results** - a list of search matches
 - uint **total** - a number of total matches matches
@@ -138,7 +154,7 @@ A class that contains the results of a photo search. It has three public propert
 
 <span id="Collections-SearchResults"></span>
 ## Unspslash.Collections.SearchResults
-A class that contains the results of a collection search. It has three public properties:
+A class that contains the results of a collection search. It has these public properties:
 
 - **results** - a `List<Collection>` with search matches
 - **total** - a number of total matches matches

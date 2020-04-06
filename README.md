@@ -182,7 +182,7 @@ The **Unsplash.Client** class is the main gateway into the system. In order to u
 you instantiate it with an Unsplash API access key which you can obtain from 
 [Unsplash Developer](https://unsplash.com/oauth/applications).
 
-## Default parameters
+## Default parameter values
 <span id="default-parameters"></span>
 The Unsplash web service has some default parameter values it uses when processing requests to it, in case those parameters had not been specified explicitly. Remember, you can set request parameters through an instance of a class from the [Unsplash.Requests](#request-types) namespace, whenever it is required as an argument in any of the [public APIs](#public-api).
 

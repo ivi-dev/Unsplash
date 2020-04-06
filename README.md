@@ -144,19 +144,37 @@ A class that contains the results of a collection search. It has three public pr
 - **total** - a number of total matches matches
 - **total_pages** - a number of results pages
   
+<span id="request-types"></span>
 ## Request types
 <span id="ListPhotosRequest"></span>
 ### Unsplash.Requests.ListPhotosRequest
-Sets parameters for a request to list photos.
-The class accepts three arguments in its constructor:
-- [Order](#Order) **order** - the ordering to apply to photos
-- uint **page** - the page to show
-- uint **perPage** - the number of photos to show per page
+Construct it to set parameters for a request to list photos.
+The class accepts these optional arguments in its constructor. 
+If any of them is not provided an Unsplash web service [default value](#default-parameters) is used:
+- [Order](#Order)? **order** - the ordering to apply to photos.
+- uint? **page** - the page to show.
+- uint? **perPage** - the number of photos to show per page.
 
 
 <span id="GetRandomPhotoRequest"></span>
-<span id="GetPhotoStatsRequest"></span>
+### Unsplash.Requests.GetRandomPhotoRequest
+Construct it to set parameters for a request for a random photo.
+The class accepts these arguments in its constructor:
+- [Orientation](#Orientation)? **orientation** - the orientation of the photo.
+- string[]? **collections** - tells the service to get random photos from these collections only.
+- bool? **featured** - weather to get only featured photos or not.
+- string? **username** - get photos only by that user.
+- string? **query** - get photos that match that query only.
 
+
+<span id="GetPhotoStatsRequest"></span>
+### Unsplash.Requests.GetPhotoStatsRequest
+Construct it to set parameters for a request for photo stats.
+The class accepts these arguments in its constructor:
+- string **id** - the id of the photo.
+- [StatsResolution](#StatsResolution)? **resolution** - the resolution of the stats report (currently only `StatsResolution.DAYS` is supported).
+- uint? **quantity** - the number of resolution units to get. For example a value of '1' here and 
+`StatsResolution.DAYS` for the 'resolution' will get photo stats for one day.
 
 ### The Unsplash.Client class
 <span id="Client"></span>
@@ -166,3 +184,14 @@ you instantiate it with an Unsplash API access key which you can obtain from
 
 ### Default parameters
 <span id="default-parameters"></span>
+The Unsplash web service has some default parameter values it uses when processing requests to it, in case those parameters had not been specified explicitly. Remember, you can set request parameters through an instance of a class from the [Unsplash.Requests](#request-types) namespace, whenever it is required as an argument in any of the [public APIs](#public-api).
+
+Here are some of the default values. The left column lists parameter names as you would see them in [Request classes] (#request-types) constructors and the right one lists Unsplash services default values. For example, if you do not specify a value for a `page` parameter in a class's constructor, '1' is going to be recieved by the Unsplash serice. 
+
+| Parameter Name | Default Value                
+|----------------|------------------------------
+| page           | 1                            
+| perPage        | 10                           
+| order          | Unsplash.Photos.Order.LATEST 
+| resolution     | Unsplash.Photos.StatsResolution.DAYS
+| quantity       | 30

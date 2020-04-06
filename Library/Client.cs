@@ -96,10 +96,7 @@ namespace Unsplash
         public async Task<Photos.SearchResults> SearchPhotosAsync(SearchPhotosRequest request)
         {
             if (request == null)
-            {
                 throw new ArgumentNullException(nameof(request));
-            }
-
             HttpResponseMessage response = await netClient.GetAsync(request.Uri).ConfigureAwait(false);
             return await ParseResponseAsync<Photos.SearchResults>(response).ConfigureAwait(false);
         }

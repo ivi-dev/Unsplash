@@ -107,7 +107,6 @@ A class that describes a photo. It has these public properties:
 - string **description** - the photo's description
 - string **alt_description** - the photo's alternate description
 
-
 <span id="DownloadURLs"></span>
 ### Unspslash.Photos.DownloadURLs
 A class that contains URLs to an image. The URLs can be used for photo download.
@@ -117,6 +116,67 @@ The class has these public properties:
 - Uri **regular** - a path to the photo in regular resolution.
 - Uri **small** - a path to the photo in small resolution.
 - Uri **thumb** - a path to the photo in thumbnail resolution.
+  
+<span id="Stats"></span>
+### Unspslash.Photos.Stats
+A class that contains stats of a photo. It has these public properties:
+
+- [Downloads](#Downloads) **downloads** - the download stats of a photo
+
+<span id="Downloads"></span>
+### Unspslash.Photos.Downloads
+A class that contains download stats of a photo. It has these public properties:
+
+- uint **total** - the total number of downloads of a photo
+
+<span id="Photos-SearchResults"></span>
+### Unspslash.Photos.SearchResults
+A class that contains the results of a photo search. It has these public properties:
+
+- List<Photo> **results** - a `List<Photo>` of search matches
+- uint **total** - a number of total matches matches
+- uint **total_pages** - a number of results pages
+  
+<span id="Sort"></span>
+### Unsplash.Photos.Sort
+An enumeration of photo sorting options. Aailable options:
+`RELEVANAT`, `LATEST`.
+
+<span id="Crop"></span>
+### Unsplash.Photos.Crop
+An enumeration of photo cropping options. Aailable options:
+`TOP`, `BOTTOM`, `LEFT`, `RIGHT`, `FACES`, `FOCAL_POINT`, `EDGES`, `ENTROPY`.
+
+<span id="Format"></span>
+### Unsplash.Photos.Format
+An enumeration of photo formatting options. Aailable options:
+`GIF`, `JP2`, `JPG`, `JSON`, `JXR`, `PJPG`, `MP4`, `PNG`, `PNG8`, `PNG32`, 
+`WEBM`, `WEBP`.
+
+<span id="Fit"></span>
+### Unsplash.Photos.Fit
+An enumeration of photo fitting options. Aailable options:
+`CLAMP`,
+`CLIP`,
+`CROP`,
+`FACEAREA`,
+`FILL`,
+`FILLMAX`,
+`MAX`,
+`MIN`,
+`SCALE`.
+
+<span id="ColorFilter"></span>
+### Unsplash.Photos.ColorFilter
+An enumeration of photo color filters. Aailable options:
+`BLACK_AND_WHITE`, `BLACK`, `WHITE`, `YELLOW`, `ORANGE`, `RED`, `PURPLE`, 
+`MAGENTA`, `GREEN`, `TEAL`, `BLUE`.
+
+<span id="Orientation"></span>
+### Unsplash.Photos.Orientation
+An enumeration of photo orientations. Aailable options:
+`LANDSCAPE`, `PORTRAIT`, `SQUARISH`.
+
   
   
   
@@ -159,7 +219,7 @@ The class has these public properties:
 
 
 <span id="Collection"></span>
-## Unspslash.Photos.Collection
+### Unspslash.Photos.Collection
 A class that describes a Collection. It has these public properties:
 - string **id** - the collection's id.
 - string **title** - the collection's title.
@@ -173,7 +233,20 @@ A class that describes a Collection. It has these public properties:
 
 There's also a `ToString()` method that returns a summary of the collection's attributes.
 
+<span id="Collections-SearchResults"></span>
+### Unspslash.Collections.SearchResults
+A class that contains the results of a collection search. It has these public properties:
 
+- **results** - a `List<Collection>` with search matches
+- **total** - a number of total matches matches
+- **total_pages** - a number of results pages
+
+
+
+
+
+
+## Users
 <span id="User"></span>
 ## Unspslash.Users.User
 A class that describes a user. It has these public properties:
@@ -207,37 +280,14 @@ A class that describes a user's profile image. It has these public properties:
 - Uri **small** - a link to the user's small sized profile image.
 - Uri **medium** - a link to the user's medium sized profile page.
 - Uri **large** - a link to the user's large sized profile page.
-
-<span id="Stats"></span>
-## Unspslash.Photos.Stats
-A class that contains stats of a photo. It has these public properties:
-
-- [Downloads](#Downloads) **downloads** - the download stats of a photo
-
-<span id="Downloads"></span>
-## Unspslash.Photos.Downloads
-A class that contains download stats of a photo. It has these public properties:
-
-- uint **total** - the total number of downloads of a photo
-
-<span id="Photos-SearchResults"></span>
-## Unspslash.Photos.SearchResults
-A class that contains the results of a photo search. It has these public properties:
-
-- List<Photo> **results** - a `List<Photo>` of search matches
-- uint **total** - a number of total matches matches
-- uint **total_pages** - a number of results pages
-
-<span id="Collections-SearchResults"></span>
-## Unspslash.Collections.SearchResults
-A class that contains the results of a collection search. It has these public properties:
-
-- **results** - a `List<Collection>` with search matches
-- **total** - a number of total matches matches
-- **total_pages** - a number of results pages
   
+  
+  
+  
+  
+
 <span id="request-types"></span>
-## Request types
+## Requests
 <span id="ListPhotosRequest"></span>
 ### Unsplash.Requests.ListPhotosRequest
 Construct it to set parameters for a request to list photos.
@@ -246,7 +296,6 @@ If any of them is not provided an Unsplash web service [default value](#default-
 - [Order](#Order)? **order** - the ordering to apply to photos.
 - uint? **page** - the page to show.
 - uint? **perPage** - the number of photos to show per page.
-
 
 <span id="GetRandomPhotoRequest"></span>
 ### Unsplash.Requests.GetRandomPhotoRequest
@@ -257,7 +306,6 @@ The class accepts these arguments in its constructor:
 - bool? **featured** - weather to get only featured photos or not.
 - string? **username** - get photos only by that user.
 - string? **query** - get photos that match that query only.
-
 
 <span id="SearchPhotosRequest"></span>
 ### Unsplash.Requests.SearchPhotosRequest
@@ -271,8 +319,6 @@ The class accepts these arguments in its constructor:
 - [ColorFilter](#ColorFilter)? **color** - search only for photos with this color filter. 
 - [Orientation[(#Orientation)? **orientation** - search only for photos with this orientation.
 
-
-
 <span id="SearchCollectionsRequest"></span>
 ### Unsplash.Requests.SearchCollectionsRequest
 Construct it to set parameters for a photo search request.
@@ -280,7 +326,6 @@ The class accepts these arguments in its constructor:
 - string? **query** - a search term.
 - uint? **page** - the result page to show.
 - uint? **perPage** - number of matches to show per page.
-
 
 <span id="ListFeaturedCollectionsRequest"></span>
 ### Unsplash.Requests.ListFeaturedCollectionsRequest
@@ -303,58 +348,12 @@ The class accepts these arguments in its constructor:
 - [Fit](#Fit)? **fit** - a fit mode.
 - uint? **dpi** - sets the dpi of the photo to be downloaded.
 
-
-<span id="Sort"></span>
-### Unsplash.Photos.Sort
-An enumeration of photo sorting options. Aailable options:
-`RELEVANAT`, `LATEST`.
-
-<span id="Crop"></span>
-### Unsplash.Photos.Crop
-An enumeration of photo cropping options. Aailable options:
-`TOP`, `BOTTOM`, `LEFT`, `RIGHT`, `FACES`, `FOCAL_POINT`, `EDGES`, `ENTROPY`.
-
-<span id="Format"></span>
-### Unsplash.Photos.Format
-An enumeration of photo formatting options. Aailable options:
-`GIF`, `JP2`, `JPG`, `JSON`, `JXR`, `PJPG`, `MP4`, `PNG`, `PNG8`, `PNG32`, 
-`WEBM`, `WEBP`.
-
-<span id="Fit"></span>
-### Unsplash.Photos.Fit
-An enumeration of photo fitting options. Aailable options:
-`CLAMP`,
-`CLIP`,
-`CROP`,
-`FACEAREA`,
-`FILL`,
-`FILLMAX`,
-`MAX`,
-`MIN`,
-`SCALE`.
-
-
-<span id="ColorFilter"></span>
-### Unsplash.Photos.ColorFilter
-An enumeration of photo color filters. Aailable options:
-`BLACK_AND_WHITE`, `BLACK`, `WHITE`, `YELLOW`, `ORANGE`, `RED`, `PURPLE`, 
-`MAGENTA`, `GREEN`, `TEAL`, `BLUE`.
-
-
-<span id="Orientation"></span>
-### Unsplash.Photos.Orientation
-An enumeration of photo orientations. Aailable options:
-`LANDSCAPE`, `PORTRAIT`, `SQUARISH`.
-
-
-
 <span id="GetRandomPhotosRequest"></span>
 ### Unsplash.Requests.GetRandomPhotosRequest
 Construct it to set parameters for a request for a random photo.
 The class accepts the same arguments in its constructor as 
 [Unsplash.Requests.GetRandomPhotoRequest](#GetRandomPhotoRequest) plus this one:
 - uint **count** - the number of photos to get.
-
 
 <span id="GetPhotoStatsRequest"></span>
 ### Unsplash.Requests.GetPhotoStatsRequest

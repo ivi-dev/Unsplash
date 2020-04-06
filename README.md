@@ -160,7 +160,7 @@ A class that contains download stats of a photo. It has these public properties:
 ## Unspslash.Photos.SearchResults
 A class that contains the results of a photo search. It has these public properties:
 
-- List<Photo> **results** - a list of search matches
+- List<Photo> **results** - a `List<Photo>` of search matches
 - uint **total** - a number of total matches matches
 - uint **total_pages** - a number of results pages
 

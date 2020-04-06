@@ -183,7 +183,7 @@ The class accepts these arguments in its constructor:
 - string? **query** - get photos that match that query only.
 
 
-<span id="GetRandomPhotoRequest"></span>
+<span id="GetRandomPhotosRequest"></span>
 ### Unsplash.Requests.GetRandomPhotosRequest
 Construct it to set parameters for a request for a random photo.
 The class accepts the same arguments in its constructor as 

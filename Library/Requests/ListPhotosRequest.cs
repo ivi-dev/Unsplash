@@ -5,15 +5,18 @@
 namespace Unsplash.Requests
 {
     using System;
+    using Library;
     using Unsplash.Extensions;
     using Unsplash.Photos;
 
     public class ListPhotosRequest : Request
     {
+        private readonly uint? perPage;
+
         public ListPhotosRequest(Order? order = null,
                                  uint? page = null,
                                  uint? perPage = null) =>
-            (Order, Page, PerPage) = (order.Describe(), page, perPage);
+            (Order, Page, this.perPage) = (order.Describe(), page, perPage);
 
         public ListPhotosRequest()
         {
@@ -38,6 +41,14 @@ namespace Unsplash.Requests
 
         private uint? Page { get; }
 
-        private uint? PerPage { get; }
+        private uint? PerPage
+        {
+            get
+            {
+                if (perPage != null)
+                    return perPage < Defaults.PerPageMax ? perPage : Defaults.PerPageMax;
+                return null;
+            }
+        }
     }
 }

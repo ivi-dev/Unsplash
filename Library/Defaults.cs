@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace Library
+namespace Unsplash
 {
     using System;
     using Unsplash.Photos;

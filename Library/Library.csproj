@@ -16,7 +16,8 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageReleaseNotes>Added the ability to specify an API key during client initialization</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <ReleaseVersion>2.1.1</ReleaseVersion>
+    <ReleaseVersion>2.1.2</ReleaseVersion>
+    <PackageVersion>2.1.2</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

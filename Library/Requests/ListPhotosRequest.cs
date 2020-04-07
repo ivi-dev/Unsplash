@@ -5,7 +5,6 @@
 namespace Unsplash.Requests
 {
     using System;
-    using Library;
     using Unsplash.Extensions;
     using Unsplash.Photos;
 

@@ -81,9 +81,11 @@ using System.Diagnostics.CodeAnalysis;
 
 // Extensions
 [assembly: SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Aiming for a lowercased string to use as a URL parameter to the Unsplash API", Scope = "member", Target = "~M:Extensions.EnumExtensions.Describe(System.Enum)~System.String")]
+[assembly: SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Require lowercase", Scope = "member", Target = "~M:Unsplash.Extensions.EnumExtensions.Describe(System.Enum)~System.String")]
+[assembly: SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Require lowercase", Scope = "member", Target = "~M:Unsplash.Extensions.EnumExtensions.Describe(System.Enum,System.Boolean)~System.String")]
+[assembly: SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Require lowercase", Scope = "member", Target = "~M:Unsplash.Extensions.StringExtensions.Titalize(System.String)~System.String")]
 
 // Unsplash.Users.ProfileImage
 [assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Mirroring the naming of elements of the JSON response returned by the Unsplash's web API", Scope = "member", Target = "~P:Unsplash.Users.ProfileImage.small")]
 [assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Mirroring the naming of elements of the JSON response returned by the Unsplash's web API", Scope = "member", Target = "~P:Unsplash.Users.ProfileImage.medium")]
 [assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Mirroring the naming of elements of the JSON response returned by the Unsplash's web API", Scope = "member", Target = "~P:Unsplash.Users.ProfileImage.large")]
-[assembly: SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "<Pending>", Scope = "member", Target = "~M:Unsplash.Extensions.EnumExtensions.Describe(System.Enum)~System.String")]

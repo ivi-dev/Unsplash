@@ -4,10 +4,10 @@
 
 namespace UnsplashTests.Requests
 {
+    using global::Unsplash;
     using global::Unsplash.Extensions;
     using global::Unsplash.Photos;
     using global::Unsplash.Requests;
-    using Library;
     using Xunit;
 
     public class ListPhotosRequestTest

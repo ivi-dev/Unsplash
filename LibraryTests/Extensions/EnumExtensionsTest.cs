@@ -27,6 +27,22 @@ namespace UnsplashTests.Extensions
         }
 
         [Fact]
+        public void Describe_OrderLatest_ReturnsATitalizedEnumsStringValue()
+        {
+            var order = Order.LATEST;
+            string? description = order.Describe(titalize: true);
+            Assert.Equal("Latest", description);
+        }
+
+        [Fact]
+        public void Describe_ColorFilterBlackAndWhite_ReturnsATitalizedEnumsStringValueWithoutUnderscores()
+        {
+            var filter = ColorFilter.BLACK_AND_WHITE;
+            string? description = filter.Describe(titalize: true);
+            Assert.Equal("Black and white", description);
+        }
+
+        [Fact]
         public void Describe_Null_ReturnsNull()
         {
             ColorFilter? filter = null;

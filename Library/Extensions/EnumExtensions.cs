@@ -8,9 +8,12 @@ namespace Unsplash.Extensions
 
     public static class EnumExtensions
     {
-        public static string? Describe(this Enum? e)
+        public static string? Describe(this Enum? e, bool titalize = false)
         {
-            return e?.ToString().ToLowerInvariant();
+            var lower = e?.ToString().ToLowerInvariant();
+            if (titalize)
+                return lower?.Titalize();
+            return lower;
         }
     }
 }

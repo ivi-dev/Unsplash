@@ -20,3 +20,6 @@ dotnet_diagnostic.SA1602.severity = none
 
 # SA1300: Element should begin with upper-case letter
 dotnet_diagnostic.SA1300.severity = none
+
+# CS1998: Async method lacks 'await' operators and will run synchronously
+dotnet_diagnostic.CS1998.severity = none

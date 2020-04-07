@@ -22,9 +22,7 @@ namespace UnsplashTests.Unsplash
         private readonly Client client = new Client(string.Empty);
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task ListPhotosAsync_Null_ReturnsAListOfPhotos()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             List<Photo> expected = ClientTestUtilities.ShimGetAsync<ListPhotosRequest, List<Photo>>();
             PoseContext.Isolate(async () =>
@@ -35,9 +33,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task GetPhotoAsync_Id_ReturnsAPhoto()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             Photo expected = ClientTestUtilities.ShimGetAsync<GetPhotoRequest, Photo>();
             PoseContext.Isolate(async () =>
@@ -48,9 +44,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task GetRandomPhotoAsync_Null_ReturnsAPhoto()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             Photo expected = ClientTestUtilities.ShimGetAsync<GetPhotoRequest, Photo>();
             PoseContext.Isolate(async () =>
@@ -61,9 +55,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task GetRandomPhotosAsync_Null_ReturnsAListOfPhotos()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             List<Photo> expected = ClientTestUtilities.ShimGetAsync<GetRandomPhotosRequest, List<Photo>>();
             PoseContext.Isolate(async () =>
@@ -74,9 +66,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task GetPhotoStatsAsync_Id_ReturnsStats()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             Stats expected = ClientTestUtilities.ShimGetAsync<GetPhotoStatsRequest, Stats>();
             PoseContext.Isolate(async () =>
@@ -87,9 +77,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task SearchPhotosAsync_Query_ReturnsSearchResults()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             PhotosSearchResults expected = ClientTestUtilities.ShimGetAsync<SearchPhotosRequest, PhotosSearchResults>();
             PoseContext.Isolate(async () =>
@@ -100,9 +88,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task DownloadPhotoAsync_UrlIdDestination_ReturnsTheSizeOfTheDownloadedFile()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             var buffer = new byte[] { 1, 2 };
             ClientTestUtilities.ShimGetByteArrayAsync(buffer);
@@ -116,9 +102,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task SearchCollectionsAsync_Query_ReturnsSearchResults()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             CollectionsSearchResults expected = ClientTestUtilities.ShimGetAsync<SearchCollectionsRequest, CollectionsSearchResults>();
             PoseContext.Isolate(async () =>
@@ -129,9 +113,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task ListFeaturedCollectionsAsync_Null_ReturnsAListOfCollections()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             List<Collection> expected = ClientTestUtilities.ShimGetAsync<ListFeaturedCollectionsRequest, List<Collection>>();
             PoseContext.Isolate(async () =>
@@ -142,9 +124,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task GetCollectionAsync_Null_ReturnsACollection()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             Collection expected = ClientTestUtilities.ShimGetAsync<GetCollectionRequest, Collection>();
             PoseContext.Isolate(async () =>
@@ -155,9 +135,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task GetCollectionPhotosAsync_Id_ReturnsACollection()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             List<Photo> expected = ClientTestUtilities.ShimGetAsync<GetCollectionPhotosRequest, List<Photo>>();
             PoseContext.Isolate(async () =>
@@ -168,9 +146,7 @@ namespace UnsplashTests.Unsplash
         }
 
         [Fact]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task ListRelatedCollectionsAsync_Id_ReturnsACollection()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             List<Collection> expected = ClientTestUtilities.ShimGetAsync<ListRelatedCollectionsRequest, List<Collection>>();
             PoseContext.Isolate(async () =>

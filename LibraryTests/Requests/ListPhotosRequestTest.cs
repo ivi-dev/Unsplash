@@ -19,7 +19,7 @@ namespace UnsplashTests.Requests
             uint page = 2;
             uint perPage = 15;
             var request = new ListPhotosRequest(order, page, perPage);
-            Assert.Matches($"&order={order.Describe()}&page={page}&per_page={perPage}",
+            Assert.Matches($"&order_by={order.Describe()}&page={page}&per_page={perPage}",
                            request.Uri.AbsoluteUri);
         }
 
@@ -30,7 +30,7 @@ namespace UnsplashTests.Requests
             uint page = 2;
             uint perPage = Defaults.PerPageMax + 1;
             var request = new ListPhotosRequest(order, page, perPage);
-            Assert.Matches($"&order={order.Describe()}&page={page}&per_page={Defaults.PerPageMax}",
+            Assert.Matches($"&order_by={order.Describe()}&page={page}&per_page={Defaults.PerPageMax}",
                            request.Uri.AbsoluteUri);
         }
     }

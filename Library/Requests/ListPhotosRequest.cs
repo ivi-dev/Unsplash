@@ -27,7 +27,7 @@ namespace Unsplash.Requests
             {
                 string address = $"{BaseUrl}photos?client_id={AccessKey}";
                 if (Order != null)
-                    address += $"&order={Order}";
+                    address += $"&order_by={Order}";
                 if (Page != null)
                     address += $"&page={Page}";
                 if (PerPage != null)

@@ -20,7 +20,7 @@ namespace Unsplash.Photos
 
         public uint height { get; set; }
 
-        public DownloadURLs urls { get; set; }
+        public URLs urls { get; set; }
 
         public uint likes { get; set; }
 

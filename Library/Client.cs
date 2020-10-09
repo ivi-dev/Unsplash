@@ -19,11 +19,16 @@ namespace Unsplash
     public sealed class Client : IDisposable
     {
         private const string VERSION = "1";
-        private readonly HttpClient netClient = new HttpClient();
+        private readonly HttpClient netClient;
 
-        public Client(string accessKey)
+        public Client(string accessKey) : this(accessKey, new HttpClient())
+        {
+        }
+
+        public Client(string accessKey, HttpClient client)
         {
             AccessKey = accessKey;
+            netClient = client;
             netClient.DefaultRequestHeaders.Add("Accept-Version", $"v{VERSION}");
         }
 

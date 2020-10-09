@@ -28,7 +28,7 @@ namespace Unsplash
         public Client(string accessKey, HttpClient client)
         {
             AccessKey = accessKey;
-            netClient = client;
+            netClient = client != null ? client : new HttpClient();
             netClient.DefaultRequestHeaders.Add("Accept-Version", $"v{VERSION}");
         }
 

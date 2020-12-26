@@ -20,7 +20,7 @@ Here's a list of the client's public API:
 
 <span id="public-api"></span>
 ## Working with photos:
-- ListPhotosAsync([ListPhotosRequest](#ListPhotosRequest)? request = null)
+- `ListPhotosAsync([ListPhotosRequest](#ListPhotosRequest)? request = null)`
   - Get a list of [Photo](#Photo) objects asynchronously.
   - **Arguments:** A [ListPhotosRequest](#ListPhotosRequest) object with 
     parameters for the request (optional). 

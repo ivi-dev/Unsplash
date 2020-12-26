@@ -20,70 +20,70 @@ Here's a list of the client's public API:
 
 <span id="public-api"></span>
 ## Working with photos:
-- `ListPhotosAsync([ListPhotosRequest](#ListPhotosRequest)? request = null)`
+- ListPhotosAsync([ListPhotosRequest](#ListPhotosRequest)? request = null)
   - Get a list of [Photo](#Photo) objects asynchronously.
   - **Arguments:** A [ListPhotosRequest](#ListPhotosRequest) object with 
     parameters for the request (optional). 
     If left at `null`, [default parameters](#default-parameters) are used.
   - **Returns:** A `List<Photo>` object.
   
-- `GetPhotoAsync(string id)`
+- GetPhotoAsync(string id)
   - Get data for a single photo asynchronously.
   - **Arguments:** The `id` of the photo you want to get data for. 
     Typically you get photo ids from method that return [Photo](#Photo) or `List<Photo>`.
   - **Returns:** A [Photo](#Photo) object.
   
-- `GetRandomPhotoAsync([GetRandomPhotoRequest](#GetRandomPhotoRequest)? request = null)`
+- GetRandomPhotoAsync([GetRandomPhotoRequest](#GetRandomPhotoRequest)? request = null)
   - Get a random photo asynchronously.
   - **Arguments:** A [GetRandomPhotoRequest](#GetRandomPhotoRequest) object with 
     parameters for the request (optional).
     If left at `null`, [default parameters](#default-parameters) are used.
   - **Returns:** A [Photo](#Photo) object.
   
-- `GetRandomPhotosAsync(uint count)`
+- GetRandomPhotosAsync(uint count)
   - Get a list of random photos asynchronously.
   - **Arguments:** A `count` that signifies the number of photos to get.
   - **Returns:** A `List<Photo>` object.
   
-- `GetRandomPhotosAsync([GetRandomPhotosRequest](#GetRandomPhotosRequest)? request = null)`
+- GetRandomPhotosAsync([GetRandomPhotosRequest](#GetRandomPhotosRequest)? request = null)
   - Get a list of random photos asynchronously.
   - **Arguments:** A [GetRandomPhotosRequest](#GetRandomPhotosRequest) object with 
     parameters for the request (optional).
     If left at `null`, [default parameters](#default-parameters) are used.
   - **Returns:** A `List<Photo>` object.
   
-- `GetPhotoStatsAsync(string id)`
+- GetPhotoStatsAsync(string id)
   - Get photo [Stats](#Stats) asynchronously.
   - **Arguments:** The `id` of the photo you want to get stats for. 
     Typically you get photo ids from method that return [Photo](#Photo) or `List<Photo>`.
   - **Returns:** A [Stats](#Stats) object.
   
-- `GetPhotoStatsAsync(GetPhotoStatsRequest request)`
+- GetPhotoStatsAsync(GetPhotoStatsRequest request)
   - Get photo [Stats](#Stats) asynchronously.
   - **Arguments:** A [GetPhotoStatsRequest](#GetPhotoStatsRequest) object with 
     parameters for the request.
   - **Returns:** A [Stats](#Stats) object.
   
-- `SearchPhotosAsync(string query)`
+- SearchPhotosAsync(string query)
   - Search for photos asynchronously.
   - **Arguments:** A search term to find photos by.
   - **Returns:** A [Photos.SearchResults](#Photos-SearchResults) object.
   
-- `SearchPhotosAsync([SearchPhotosRequest](#SearchPhotosRequest) request)`
+- SearchPhotosAsync([SearchPhotosRequest](#SearchPhotosRequest) request)
   - Search for photos asynchronously.
   - **Arguments:** A [SearchPhotosRequest](#SearchPhotosRequest) object with 
     parameters for the request.
   - **Returns:** A [Photos.SearchResults](#Photos-SearchResults) object.
   - **Throws:** An `ArgumentNullException` if `request` is null.
   
-- `DownloadPhotoAsync(Uri url, string id, string destination)`
+- DownloadPhotoAsync(Uri url, string id, string destination)
   - Download a photo asynchronously.
   - **Arguments:** A `url` of the photo, its `id` used to mark the photo as downloaded 
     (Unsplash policy) and the file system `destination` of the downloaded file. 
   - **Returns:** The length in bytes of the downloaded file.
   
-- `DownloadPhotoAsync([DownloadPhotoRequest](#DownloadPhotoRequest) request, string id, 
-  string destination)`
+- DownloadPhotoAsync([DownloadPhotoRequest](#DownloadPhotoRequest) request, string id, 
+  string destination)
   - Download a photo asynchronously.
   - **Arguments:** A [DownloadPhotoRequest](#DownloadPhotoRequest) object with 
     parameters for the request, the photo's `id` used to mark the photo as downloaded 

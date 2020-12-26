@@ -97,7 +97,7 @@ Here's a list of the client's public API:
 A class that describes a photo. It has these public properties:
 - string **id** - the photo's id
 - DateTime **created_at** - creation date
-- [User[(#User) **user** - the author of the photo
+- [User](#User) **user** - the author of the photo
 - uint **width** - photo's width in pixels
 - uint **height** - photo's height in pixels
 - [DownloadURLs](#DownloadURLs) **urls** - a set of URLs that you can use to download 
